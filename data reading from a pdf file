@@ -1,0 +1,24 @@
+# Going to use PYPDF2 for extracting a text from a pdf file.
+
+!pip install PyPDF2
+
+#Import PYPDF
+
+import PyPDF2 as pdf
+
+#To  open the pdf file 'Open()' function is used.'rb'opens the file for reading in binary mode.
+
+file = open('Creating a Cascade of Haar-Like Classifiers- Step by Step.pdf', 'rb')
+
+pdf_reader = pdf.PdfFileReader(file)
+
+#To check if the file is encrypted or not.
+
+pdf_reader.getIsEncrypted()
+False
+
+page1 = pdf_reader.getPage(0)
+
+Page object page1 has function extractText() to extract text from the PDF page.
+page1.extractText()[:1050]
+Creating a Cascade of Haar-Like Classifiers: Step by Step\n\n\n  Abstract:  The tutorial provides a detailed\n discussion on what you need to \ncreate a cascade \nof classifiers \nbased on Haar-like features, which is the most \ncommon technique in computer-vision for face \nand eye detection. This tutorial is designed as pa\nrt of course 775- Advanced multimedia imaging; \nhowever, it is easy to understand for any CS student who is interested in the topic.   \nAll the required tools and positive/negative image dataset are provided here:  \n\nhttps://www.cs.auckland.ac.nz/~m.\nrezaei/Tutorials/Haar-Training.zip\n   After creating your classifier, you \nmay continue with th\ne tutorial ﬁFace and Eye Detection Using \nOpenCVﬂ, and the available source code: \nwww.cs.auckland.ac.nz/~m.rezaei/Downloads.html\n  as well as our published academic papers\n and articles listed in [1-8]. \n \nKeywords:\n Face Detection, Eye Detect\nion, Haar Features, Haar-W\navelet, Image Processing, \nComputer Vision, Classification, W\neak Classifiers, Markup Tool, Ob\nject marker, Ha
